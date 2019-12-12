@@ -81,6 +81,7 @@ nav{
 	font-family: Roboto Slab;
 	font-size: 90px;
 	text-align: center;
+	animation: rise 1.5s ease;
 }
 
 .intro-text p{
@@ -95,9 +96,108 @@ nav{
 	text-align: center;
 }
 
+.intro-text h2 a:hover {
+	color: #d50071;
+	transition: 0.6s;
+}
+
+.intro-text h2 a{
+	color: black;
+	text-decoration: none;
+}
+
 .big-circle{
 	position: absolute;
 	bottom: 10px;
 	right: 30px;
 	height: 20%;
+	opacity: 0.6;
+	z-index: 1;	
+}
+
+.circle{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: #d50071;
+	border-radius: 50%;
+	left: 600px;
+	bottom: 30px;
+	animation:woosh 6s ease;
+	animation-iteration-count: infinite;
+	opacity: 1;
+	z-index: 1000;
+}
+.circlex{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: red;
+	border-radius: 50%;
+	left: 600px;
+	bottom: 30px;
+	animation:woosh 5.8s ease;
+	animation-iteration-count: infinite;
+	opacity: 0.6;
+	z-index: 1000;
+}
+.circley{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #e89aff;
+	border-radius: 50%;
+	left: 600px;
+	bottom: 30px;
+	animation:woosh 5.6s ease;
+	animation-iteration-count: infinite;
+	opacity: 1;
+	z-index: 1000;
+}
+
+.circle:hover{
+	sbackground: #e89aff;
+	opacity: 1;
+	transition: 1s;
+}
+@keyframes woo{
+	0%{
+		transform: translateX(100px);
+	}
+	25%{
+		transform: translateX(0px);
+	}
+	50%{
+		transform:translateX(-100px);
+	}
+	75%{
+		transform:translateX(0px);
+	}
+	100%{
+		transform: translateX(100px);
+	}
+}
+
+@keyframes woosh{
+	0%{
+		transform: translateX(300px);
+	}
+	50%{
+		transform:translateX(-300px);
+	}
+	100%{
+		transform: translateX(300px);
+	}
+}
+
+
+@keyframes rise{
+	0%{
+		opacity: 0;
+		transform: translateY(80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
